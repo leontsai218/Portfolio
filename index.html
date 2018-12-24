@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Leon Tsai</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+
+  <div id="app">
+    <ul class="i18n">
+      <li class="lang" v-for="lang in Languages" ref="lang.Code" :class="lang.Code === Locale ? 'active' : ''" @click="SwitchLanguage(lang.Code)">
+        <div class="text">{{lang.Display}}</div>
+        <div class="state"></div>
+      </li>
+    </ul>
+    <div class="resume">
+      <div class="left">
+        <h1 class="myName">{{__(Resume.Name)}}</h1>
+        <div class="info">
+          <h4 class="title">{{__(Resume.Title)}} </h4>
+          <p class="summary" v-html="__(Resume.Summary)"></p>
+        </div>
+        <hr />
+        <div class="skills">
+          <div class="skill lang">
+            <h3 ref="lang" @click="HideContent('lang')">{{__(Resume.Skills.Languages.Title)}}</h3>
+            <ul>
+              <li class="item" v-for="item in Resume.Skills.Languages.List">
+                <div class="name">{{item.Name}}</div>
+                <div class="bar">
+                  <div class="value" :style="{width: 100*item.Level/5 + '%'}">
+                    <div class="desc">{{__(item.LevelDesc)}}</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="skill tech">
+            <h3 ref="tech" @click="HideContent('tech')"> {{__(Resume.Skills.Techniques.Title)}}</h3>
+            <ul>
+              <li class="item" v-for="item in Resume.Skills.Techniques.List">
+                <div class="name">{{item.Name}}</div>
+              </li>
+            </ul>
+          </div>
+          <div class="skill tool">
+            <h3 ref="tool" @click="HideContent('tool')"> {{__(Resume.Skills.Tools.Title)}}</h3>
+            <ul class="toolTypes">
+              <li v-for="type in ToolTypes">
+                <div class="toolType badge badge-pill">{{__(type)}}</div>
+                <ul class="items">
+                  <li class="item" v-for="item in Resume.Skills.Tools.List" v-if="item.Type === type">{{item.Name}}
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="experiences">
+          <h3 ref="exp" @click="HideContent('exp')">{{__("Label\\Experiences")}}</h3>
+          <ul class="timePoints">
+            <li v-for="exp in Resume.Experiences">
+              <h5 class="timePoint">{{exp.Year}}</h5>
+              <ul class="events">
+                <li class="event" v-for="(event, index) in exp.Events">
+                  <div class="display" v-if="event.Display">
+                    <h4 class="desc"> <i :class="event.IconClass" v-if="event.IconClass"></i>{{__(event.Description)}}</h4>
+                    <hr />
+                    <p class="detail" v-if="event.Detail" v-html="__(event.Detail)"></p><a class="organization" v-if="event.Organization"
+                      :href="event.Link" target="_blank" v-html="__(event.Organization)"></a>
+                    <div class="location">@ {{__(event.Location)}}</div>
+                    <div class="hideBtn" @click="HideEvent(exp.Events[index])"></div>
+                  </div>
+                  <div class="collapsed" v-if="!event.Display" @click="ShowEvent(exp.Events[index])">
+                    <div class="tip">{{__(event.Description)}}</div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="projects">
+          <h3 ref="proj" @click="HideContent('proj')">{{__("Label\\Projects")}}</h3>
+          <ul class="timePoints">
+            <li v-for="project in Resume.Projects">
+              <h5 class="timePoint">{{project.Year}}</h5>
+              <ul class="events">
+                <li class="event" v-for="(proj, index) in project.Events">
+                  <h4 class="desc"> <a :href="proj.Link" target="_blank">{{__(proj.Description)}}</a></h4>
+                  <ul class="roles">
+                    <li class="role" v-for="role in proj.Roles">{{__(role)}}</li>
+                  </ul>
+                  <hr />
+                  <p class="detail" v-if="proj.Detail" v-html="__(proj.Detail)"></p>
+                  <ul class="features">
+                    <li class="feature" v-for="feature in proj.Features">{{__(feature)}}</li>
+                  </ul><a class="organization" v-if="proj.Organization" :href="proj.Link" target="_blank" v-html="__(proj.Organization)"></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="contact">
+        <ul>
+          <li>LinkedIn: <a :href="Resume.LinkedInUrl" target="_blank">Leon Tsai</a></li>
+          <li><a :href="'mailto:'+Resume.Email" target="_blank">{{Resume.Email}}</a></li>
+        </ul>
+      </div>
+      <div class="photo"></div>
+    </div>
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+
+
+  <script src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

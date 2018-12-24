@@ -1,0 +1,346 @@
+$color_white: #eee
+$color_grey: darken($color_white, 30%)
+$color_black: darken(#333, 5%)
+$color_red: #f34
+$color_orange: #fa0
+
+$width_lg: 992px
+
+@mixin Size($w, $h)
+  width: $w
+  height: $h
+
+*
+  // border: 1px solid #000
+  font-family: consolas, 微軟正黑體
+  position: relative
+
+html, body
+  width: 100%
+
+body
+  padding: 40px 80px
+  display: flex
+  justify-content: center
+  background-color: $color_black
+  color: $color_white
+  font-size: 16px
+  line-height: 28px
+  transition: 0.5s
+
+hr
+  background-color: rgba($color_white, 0.3)
+  
+a
+  text-decoration: none
+  color: $color_white
+  &:hover
+    text-decoration: none
+    color: $color_orange
+
+h3
+  margin-top: 40px
+  transition: 0.5s
+  cursor: pointer
+  &::after
+    content: ""
+    display: inline-block
+    +Size(20px, 8px)
+    margin-left: 10px
+    background-color: $color_orange
+  &.hidden
+    filter: brightness(0.5)
+  
+ul
+  padding: 0
+  list-style: none  
+
+.i18n
+  display: inline-block
+  left: 50%
+  transform: translate(-50%)
+  color: $color_grey
+  transition: 0.5s
+  .lang
+    display: inline-block
+    padding: 10px
+    cursor: pointer
+    &.active
+      color: $color_white
+      font-weight: bold
+      .state
+        border: none
+        background-color: $color_orange
+  .state
+    +Size(10px, 10px)
+    border: 1px solid $color_white
+    border-radius: 50%
+    left: 50%
+    transform: translate(-50%)
+
+.resume
+  display: flex
+  // min-width: 520px
+  padding: 50px
+  border: 8px solid $color_white
+  border-radius: 20px
+  
+  .left, .right
+    padding: 15px
+    
+  .left
+    flex: 1
+    // min-width: 360px
+    padding-right: 50px
+    border-right: 1px solid $color_orange
+    .myName
+      transition: 0.3s
+    .title
+      margin-top: 30px
+    .summary
+      border-left: 4px solid $color_orange
+      padding-left: 10px
+    .info
+      display: inline-block
+        
+    .skill
+      transition: 1s
+      li
+        display: flex
+        align-items: center
+        padding: 5px 0 5px 0
+      
+    .lang
+      min-width: 295px
+      li
+        justify-content: space-between
+      .name
+        flex: 120px
+        flex-shrink: 0
+      .bar
+        flex: 175px
+        flex-grow: 0
+        flex-shrink: 0
+        height: 20px
+        background-color: rgba($color_white, 0.1)
+        border-radius: 7px
+        border: 2px solid $color_orange
+        overflow: hidden
+        .value
+          height: 100%
+          background-color: $color_orange
+          display: flex
+          flex-direction: row-reverse
+          align-items: center
+          .desc
+            font-size: 0.8rem
+            margin-right: 5px
+            color: $color_black
+    .tool
+      .toolType
+        background-color: $color_orange
+        color: $color_black
+      li
+        display: block
+      li.item
+        padding: 0                
+                
+  .right
+    display: inline-block
+    flex: 2
+    // min-width: 360px
+    padding-left: 50px
+    
+    .experiences, .projects
+      padding-top: 10px
+    .timePoints
+      padding-bottom: 5px
+      top: 20px
+      
+      // 時間軸
+      &::before 
+        content: ""
+        display: block
+        +Size(8px, 100%)
+        background-color: rgba($color_white, 0.1)
+        border-radius: 0 0 50% 50%
+        position: absolute
+        left: 6px
+        top: 5px
+      
+      .timePoint
+        display: flex
+        align-items: center
+        color: $color_grey
+        
+        // 時間點
+        &::before
+          content: ""
+          display: inline-block
+          +Size(20px, 20px)
+          border-radius: 50%
+          border: 4px solid $color_black
+          background-color: $color_white
+          margin-right: 10px
+        
+      .events
+        padding-left: 20px
+        .event
+          padding: 10px
+          // font-size: 16px
+          i
+            margin-right: 10px
+          .desc
+            font-size: 20px
+            color: white
+          .detail
+            color: $color_grey
+          .features
+            margin: 0 0 1.5rem 1.5rem
+            .feature
+              list-style: disc
+          .location
+            color: $color_grey
+          .hideBtn
+            display: inline-block
+            position: absolute
+            bottom: 10px
+            right: 0
+            cursor: pointer
+            &::after
+              content: ""
+              display: block
+              border-color: transparent transparent $color_white transparent
+              border-width: 10px 5px 10px 5px
+              border-style: solid solid solid solid
+            &:hover::after
+              border-color: transparent transparent $color_orange transparent
+        .collapsed
+          color: $color_grey
+          cursor: pointer
+          .tip
+            display: inline-block
+            &::before
+              content: ""
+              display: inline-block
+              margin-right: 10px
+              border-color: $color_grey transparent transparent transparent
+              border-width: 10px 5px 10px 5px
+              border-style: solid
+              transform: translateY(50%)
+          &:hover
+            color: $color_orange
+            .tip::before
+              border-color: $color_orange transparent transparent transparent
+          
+  .contact
+    display: inline-block
+    position: absolute
+    top: 0
+    right: 0
+    padding: 5px 280px 5px 20px
+    border-radius: 20px 20px 0 20px
+    background-color: lighten($color_black, 5%)
+    line-height: 32px
+    transition: 0.5s
+    ul
+      margin: 0
+      padding: 5px
+    li
+      padding-top: 5px
+      
+  .photo
+    +Size(200px, 200px)
+    border-radius: 50%
+    background-image: url("https://i.imgur.com/a1Nvwx7.jpg")
+    background-size: cover
+    border: 5px solid $color_white
+    position: absolute
+    right: 50px
+    top: -75px
+    transition: 0.5s
+    .more
+      position: absolute
+      bottom: -60px
+      left: 50%
+      transform: translate(-50%)
+  .corner
+    position: absolute
+    bottom: 0
+    right: 0
+
+@media screen and (max-width: 950px)
+  body
+    padding: 0 40px 
+  h3
+    margin-top: 10px
+  .resume
+    display: block
+    padding: 20px
+    .left, .right
+      padding: 0
+    .left
+      border: none
+      .underSummary
+        display: block
+      .skill
+        display: inline-block
+        vertical-align: top
+        margin-right: 40px
+      .lang
+        max-width: 370px
+        min-width: 295px
+        .name
+          flex-grow: 0
+        
+      .tech
+        width: 190px
+      .tool
+        margin-right: 0
+        width: 190px
+        ul.items
+          display: flex
+          flex-wrap: wrap
+        li.item
+          display: inline-block
+          &:not(:last-child)
+            margin-right: 10px
+            &::after
+              content: "/"
+          
+@media screen and (max-width: 585px)
+  .resume
+    .left
+      .skill
+        margin-right: 0
+        
+@media screen and (max-width: 400px)
+  .resume
+    border: none
+    .contact
+      border-radius: 20px
+      
+@media screen and (max-width: 1150px)
+  .i18n
+    left: 100%
+    transform: translate(-100%)
+  .resume
+    .contact
+      padding: 10px 110px 10px 10px
+    .photo
+      +Size(100px, 100px)
+      right: 0
+      top: 0
+      a
+        display: none
+
+@media screen and (max-width: 750px)
+  .resume
+    .left
+      .myName
+        margin-top: 100px
+    // .right
+    //   .timePoints
+    //     .events
+    //       .event .hideBtn, .collapsed
+    //         display: none
