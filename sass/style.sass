@@ -4,8 +4,6 @@ $color_black: darken(#333, 5%)
 $color_red: #f34
 $color_orange: #fa0
 
-$width_lg: 992px
-
 @mixin Size($w, $h)
   width: $w
   height: $h
@@ -315,6 +313,8 @@ ul
         margin-right: 0
         
 @media screen and (max-width: 400px)
+  a
+    text-decoration: underline
   .resume
     border: none
     .contact

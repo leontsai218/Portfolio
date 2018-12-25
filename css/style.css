@@ -370,6 +370,10 @@ ul {
   }
 }
 @media screen and (max-width: 400px) {
+  a {
+    text-decoration: underline;
+  }
+
   .resume {
     border: none;
   }

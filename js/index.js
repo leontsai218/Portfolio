@@ -24,7 +24,7 @@ const RESOURCES = {
 			NCKUPDC: "Pop Dance Club, National Cheng Kung University",
 			Bachelor: "Bachelor of Science",
 			NCKUCSIE: "Computer Science & Information Engineering, <br>National Cheng Kung University",
-			WalkingaroundTaiwan: "Walking 1,200KM around Taiwan island in 43 days.",
+			WalkingaroundTaiwan: "Walked 1,200KM around Taiwan island in 43 days.",
 			ROCA: "Taiwan (R.O.C.) Armed Forces",
 			CYTCo: "Chen-Yo Technology Co.",
 			CYTCoDetail: "Developed a window application (WinForm) to visualize data from the instruments in real-time by C#.",
@@ -94,7 +94,7 @@ const RESOURCES = {
 		Message: {
 			Name: "蔡孟哲",
 			Title: "軟體工程師",
-			Summary: "擁有網頁全端開發兩年的經驗，具備處理資料庫/後端/前端相關需求的能力，具有從無到有獨立開發小型網站系統並部署的經驗，多數時間是在 Windows 環境下工作。秉持持續最佳化的精神，常運用閒暇時間汲取新知並分享給團隊夥伴；寫程式時稍有潔癖，致力於寫出高效且優雅的程式碼。期許能參與重視有效溝通、產品品質及使用者體驗的軟體開發團隊，在其中貢獻所有自身的經驗與技能。",
+			Summary: "　　擁有網頁全端開發兩年的經驗，具備處理資料庫/後端/前端相關需求的能力，具有從無到有獨立開發小型網站系統並部署的經驗，多數時間是在 Windows 環境下工作。秉持持續最佳化的精神，常運用閒暇時間汲取新知並分享給團隊夥伴；寫程式時稍有潔癖，致力於寫出高效且優雅的程式碼。期許能參與重視有效溝通、產品品質及使用者體驗的軟體開發團隊，在其中貢獻所有自身的經驗與技能。",
 			NCKUPDC: "國立成功大學流行舞蹈社",
 			Bachelor: "取得學士學位",
 			NCKUCSIE: "國立成功大學資訊工程學系",
