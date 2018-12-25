@@ -3,6 +3,7 @@ const RESOURCES = {
 		Label: {
 			ProgrammingLanguages: "Programming Languages",
 			RevisionControl: "Revision Control",
+      President: "Director", 
 			WalkingaroundTaiwan: "Walking Around Taiwan",
 			MandatoryMilitaryService: "Mandatory Military Service",
 			OutsourcedProgrammer: "Outsourced Programmer",
