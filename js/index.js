@@ -20,7 +20,7 @@ const RESOURCES = {
 		Message: {
 			Name: "Leon Tsai",
 			Title: "Software Engineer",
-			Summary: "I possess experience with full stack web developement. <br>As a programmer, I enjoy solving problems and building new things by coding. At the same time, I devote myself to coding cleanly. <br>My faiths are following: <ul><li>\"Do things interesting or useful.\" - In leisure time, I love learning new things out of interest or their usefulness.</li><li>\"Partners get more sensible, communication gets easier.\" - In company, I am delighted to shared knowledge and mentored freshmen. </li><li>\"Do right things. Make things right. Ensure the 'right' is right.\" -  So, I become a novice of Test-Driven-Development recently.</li></ul>",
+			Summary: "I possess experience with full stack web developement. <br>As a programmer, I enjoy solving problems and building new things by coding. At the same time, I devote myself to coding cleanly. <br>My faiths are as follows: <ul><li>\"Do  interesting and useful things.\" - In leisure time, I love learning new things due to interest or the usefulness.</li><li>\"When partners get more sensible, communication gets easier.\" - In company, I am delighted to share knowledge and mentor freshmen. </li><li>\"Do right things. Make things right. Ensure the 'right' is truely validated.\" -  So, I became a novice of Test-Driven-Development recently.</li></ul>",
 			NCKUPDC: "Pop Dance Club, National Cheng Kung University",
 			Bachelor: "Bachelor of Science",
 			NCKUCSIE: "Computer Science & Information Engineering, <br>National Cheng Kung University",
@@ -28,26 +28,26 @@ const RESOURCES = {
 			ROCA: "Taiwan (R.O.C.) Armed Forces",
 			CYTCo: "Chen-Yo Technology Co.",
 			CYTCoDetail: "Developed a window application (WinForm) to visualize data from the instruments in real-time by C#.",
-			PresenterInInternationalConferenceDetail: "Attended at IEEM 2014 and had an oral presentation for my research, \"Construction of an Interactive Behavioral and Feature Structure Model for Facebook.\"",
+			PresenterInInternationalConferenceDetail: "Attended IEEM 2014 and had an oral presentation for my research, \"Construction of an Interactive Behavioral and Feature Structure Model for Facebook.\"",
 			BuilderTCo: "BUILDER Technology Co.",
-			BuilderTCoDetail: "Maintained a website order management system and developing new features by using SAP B1, IIS, ASP.NET WebForm and MS SQL Server. Sometimes dealt with problems about internet and development environment.",
+			BuilderTCoDetail: "Maintained a website order management system and developed new features by using SAP B1, IIS, ASP.NET WebForm and MS SQL Server. Sometimes dealt with problems about internet and development environment.",
 			Master: "Master of Science",
-			MasterDetail: "Publish: \"Development of an Approach for Automatically Classifying User's Personality Type by Mining Interactions in Facebook,\" NCKU, 2015. <br>The Facebook data of subjects in research experiment were fetched and analyzed. Text Mining techniques and classification algorithms were used for classifying subjects' personality type. Techniques and tools such as C#, WinForm, ASP.NET WebForm, HTML, CSS, Weka (Data Mining tool), CKIP (online Chinese word segmentation API), MS SQL Server and IIS were used for implementing this research. <br>Letter Grade: A+ / Grade Points: 4.3",
+			MasterDetail: "Publish: \"Development of an Approach for Automatically Classifying User's Personality Type by Mining Interactions in Facebook,\" NCKU, 2015. <br>The Facebook data of subjects in research experiment were fetched and analyzed. Text Mining techniques and classification algorithms were used for classifying subjects' personality type. Techniques and tools such as C#, WinForm, ASP.NET WebForm, HTML, CSS, Weka (Data Mining tool), CKIP (online Chinese word segmentation API), MS SQL Server and IIS were used for implementing this research as well. <br>Letter Grade: A+ / Grade Points: 4.3",
 			NCKUIEEM: "Institue of Manufacturing Information & Systems, <br>National Cheng Kung University",
 			SJTU: "Shanghai Jiao Tong University",
 			SJTUDetail: "",
 			GSS: "Galaxy Software Services Co.",
-			ProgrammerDetail: "Full stack developer in many projects. Dealt with DB/Back-End/Front-End issues. Used QA tools and CI tools to improve productivity and code qulity",
+			ProgrammerDetail: "Full stack developer in numbers of  projects. Dealt with DB/Back-End/Front-End issues. Used QA tools and CI tools to improve productivity and code quality.",
 			ProgramAnalystDetail: "Promoted after being programmer for 1 year. Assigned to support more complicated product & projects. Had more responsibility for sharing knowledge and solving problems.",
 			MentorDetail: "Mentored 5 freshmen altogether.",
 			MOSTKits: "Using kits such as NPOI, NLog etc.",
 			TraineeOfTddAndRefactoringTraining: "Trainee of \"TDD and Continuous Refactoring\"",
-			TddAndRefactoringTraining: "Attended a training of \"Evolutionary Development - TDD and Continuous Refactoring\" established by Joey Chen @ Odd-e to improve development knowledge and skill.",
-			MOSTProject: "Taiwan Ministry of Science and Technology (MOST) External & Internal System [Customized Project]",
-			MOSTProjectDetail: "A website system for public users such as professors & researchers submiting academic plans while MOST internal users managing data, reviewing projects and assinging tasks.",
+			TddAndRefactoringTraining: "Attended a training of \"Evolutionary Development - TDD and Continuous Refactoring\" by Joey Chen @ Odd-e intended for improving development knowledge and skill.",
+			MOSTProject: "Taiwan Ministry of Science and Technology (MOST) External & Internal System [Customized Projects]",
+			MOSTProjectDetail: "A website system for public users such as professors & researchers submiting academic plans, while MOST internal users can manage data, review projects and assign tasks by this system.",
 			I18nIntroducer: "The person responsible for introducing i18n",
 			ODSystem: "Official Document System [Product & Customized Project]",
-			ODSystemDetail: "A website system for organizations such as the Government departments, banks, large companies etc. processing official document online. Customized projects are derived from the product.",
+			ODSystemDetail: "A website system for organizations such as the Government departments, banks and large companies etc. processing official document online. Customized projects are derived from the product.",
 			ODSystemKits: "Using kits such as Spring.Net Framework (IoC), Quartz.NET (Schedule), DevExpress (Report), Elmah (Log) etc.",
 			DeveloperInProductTeam: "Back-End/Front-End developer in Product Team",
 			DeveloperInProjectTeam: "Full stack developer in Project team",
@@ -177,7 +177,6 @@ var ResumeData = {
 				{ Name: "SonarQube", Type: "Label\\QA" },
 				{ Name: "SonarLint", Type: "Label\\QA" },
 				{ Name: "Checkmarx", Type: "Label\\QA" },
-				// { Name: "Resharper", Type: "QA" }, 
 				{ Name: "Jenkins", Type: "Label\\CI" },
 				{ Name: "SVN", Type: "Label\\RevisionControl" },
 				{ Name: "Git", Type: "Label\\RevisionControl" },
@@ -339,16 +338,8 @@ var ResumeData = {
 		},
 		{
 			Year: 2019,
-			// Events: [
-			//   {
-			//     Description: "Trainee",
-			//     Detail: "A training of \"Unit Testing Effectively with Legacy Code\" established by Joey Chen @ Odd-e.", 
-			//     Organization: "Joey Chen @ Odd-e", 
-			//     Link: "https://dotblogs.com.tw/hatelove/1", 
-			//     Location: "Label.Taiwan", 
-			//     Display: true
-			//   }, 
-			// ]
+			Events: [
+			]
 		},
 	],
 	Projects: [
@@ -429,7 +420,7 @@ var Languages = [
 		Display: "中"
 	},
 ];
-var DefaultLocale = "EN";
+var DefaultLocale = "TW";
 
 var vm = new Vue({
 	el: "#app",
