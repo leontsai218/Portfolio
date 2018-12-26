@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131309662-1"></script>
   <script>
@@ -12,10 +13,10 @@
     gtag('config', 'UA-131309662-1');
   </script>
 
-  <meta charset="UTF-8">
   <title>Leon Tsai</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/x-icon" href="https://i.imgur.com/lr9hPdp.png">
+  <link rel="shortcut icon" type="image/x-icon" href="image/icon.png">
 
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
@@ -51,7 +52,8 @@
               <li class="item" v-for="item in Resume.Skills.Languages.List">
                 <div class="name">{{item.Name}}</div>
                 <div class="bar">
-                  <div class="value" :style="{width: 100*item.Level/5 + '%'}">
+                  <div class="scale" v-for="n in 10"></div>
+                  <div class="value" :style="{width: 10*item.Level+1 + '%'}">
                     <div class="desc">{{__(item.LevelDesc)}}</div>
                   </div>
                 </div>

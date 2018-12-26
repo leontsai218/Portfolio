@@ -145,14 +145,14 @@ var ResumeData = {
 			Title: "Label\\ProgrammingLanguages",
 			Topic: "lang",
 			List: [
-				{ Name: "C#.NET", Level: 4, LevelDesc: "Label\\Advanced" },
-				{ Name: "JavaScript", Level: 4, LevelDesc: "Label\\Advanced" },
-				{ Name: "jQuery", Level: 4, LevelDesc: "Label\\Advanced" },
-				{ Name: "HTML / Pug", Level: 4, LevelDesc: "Label\\Advanced" },
-				{ Name: "CSS / Sass", Level: 4, LevelDesc: "Label\\Advanced" },
-				{ Name: "SQL / T-SQL", Level: 3.5, LevelDesc: "Label\\Intermediate" },
-				{ Name: "Java", Level: 3, LevelDesc: "Label\\Intermediate" },
-				{ Name: "C", Level: 1.5, LevelDesc: "Label\\Novice" },
+				{ Name: "C#.NET", Level: 8, LevelDesc: "Label\\Advanced" },
+				{ Name: "JavaScript", Level: 8, LevelDesc: "Label\\Advanced" },
+				{ Name: "jQuery", Level: 8, LevelDesc: "Label\\Advanced" },
+				{ Name: "HTML / Pug", Level: 8, LevelDesc: "Label\\Advanced" },
+				{ Name: "CSS / Sass", Level: 8, LevelDesc: "Label\\Advanced" },
+				{ Name: "SQL / T-SQL", Level: 7, LevelDesc: "Label\\Intermediate" },
+				{ Name: "Java", Level: 6, LevelDesc: "Label\\Intermediate" },
+				{ Name: "C", Level: 3, LevelDesc: "Label\\Novice" },
 			]
 		},
 		Techniques: {

@@ -17,7 +17,8 @@
             li.item(v-for="item in Resume.Skills.Languages.List")
               .name {{item.Name}}
               .bar
-                .value(:style="{width: 100*item.Level/5 + '%'}")
+                .scale(v-for="n in 10")
+                .value(:style="{width: 10*item.Level+1 + '%'}")
                   .desc {{__(item.LevelDesc)}}
         .skill.tech
           h3(ref="tech" @click="HideContent('tech')")  {{__(Resume.Skills.Techniques.Title)}}

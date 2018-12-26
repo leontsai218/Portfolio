@@ -1,3 +1,9 @@
+// debug
+// *
+  border: 1px solid #000
+// .resume .left .info
+  display: none !important
+
 $color_white: #eee
 $color_grey: darken($color_white, 30%)
 $color_black: darken(#333, 5%)
@@ -8,8 +14,12 @@ $color_orange: #fa0
   width: $w
   height: $h
 
+@mixin Center
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
 *
-  // border: 1px solid #000
   font-family: consolas, 微軟正黑體, 'Inconsolata', monospace, 'Noto Sans TC', sans-serif
   position: relative
 
@@ -119,21 +129,28 @@ ul
         flex: 175px
         flex-grow: 0
         flex-shrink: 0
+        display: flex
         height: 20px
         background-color: rgba($color_white, 0.1)
         border-radius: 7px
         border: 2px solid $color_orange
         overflow: hidden
+        .scale
+          +Size(10%, 100%)
+          display: inline-block
+          border-left: 1px solid rgba($color_white, 0.2)
         .value
+          position: absolute
           height: 100%
           background-color: $color_orange
           display: flex
-          flex-direction: row-reverse
+          justify-content: flex-end
           align-items: center
           .desc
             font-size: 0.8rem
-            margin-right: 5px
+            padding-right: 5px
             color: $color_black
+          
     .tool
       .toolType
         background-color: $color_orange
@@ -339,8 +356,3 @@ ul
     .left
       .myName
         margin-top: 100px
-    // .right
-    //   .timePoints
-    //     .events
-    //       .event .hideBtn, .collapsed
-    //         display: none
