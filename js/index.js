@@ -149,10 +149,10 @@ var ResumeData = {
 				{ Name: "JavaScript", Level: 8, LevelDesc: "Label\\Advanced" },
 				{ Name: "jQuery", Level: 8, LevelDesc: "Label\\Advanced" },
 				{ Name: "HTML / Pug", Level: 8, LevelDesc: "Label\\Advanced" },
-				{ Name: "CSS / Sass", Level: 8, LevelDesc: "Label\\Advanced" },
-				{ Name: "SQL / T-SQL", Level: 7, LevelDesc: "Label\\Intermediate" },
+				{ Name: "CSS / Sass", Level: 7, LevelDesc: "Label\\Advanced" },
+				{ Name: "SQL / T-SQL", Level: 7, LevelDesc: "Label\\Advanced" },
 				{ Name: "Java", Level: 6, LevelDesc: "Label\\Intermediate" },
-				{ Name: "C", Level: 3, LevelDesc: "Label\\Novice" },
+				{ Name: "C", Level: 4, LevelDesc: "Label\\Novice" },
 			]
 		},
 		Techniques: {
