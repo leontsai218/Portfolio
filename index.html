@@ -86,7 +86,6 @@
           <h3 ref="exp" @click="HideContent('exp')">{{__("Label\\Experiences")}}</h3>
           <ul class="timePoints">
             <li v-for="exp in Resume.Experiences">
-              <h5 class="timePoint">{{exp.Year}}</h5>
               <ul class="events">
                 <li class="event" v-for="(event, index) in exp.Events">
                   <div class="display" v-if="event.Display">
@@ -102,6 +101,7 @@
                   </div>
                 </li>
               </ul>
+              <h5 class="timePoint">{{exp.Year}}</h5>
             </li>
           </ul>
         </div>
@@ -109,7 +109,6 @@
           <h3 ref="proj" @click="HideContent('proj')">{{__("Label\\Projects")}}</h3>
           <ul class="timePoints">
             <li v-for="project in Resume.Projects">
-              <h5 class="timePoint">{{project.Year}}</h5>
               <ul class="events">
                 <li class="event" v-for="(proj, index) in project.Events">
                   <h4 class="desc"> <a :href="proj.Link" target="_blank">{{__(proj.Description)}}</a></h4>
@@ -123,6 +122,7 @@
                   </ul><a class="organization" v-if="proj.Organization" :href="proj.Link" target="_blank" v-html="__(proj.Organization)"></a>
                 </li>
               </ul>
+              <h5 class="timePoint">{{project.Year}}</h5>
             </li>
           </ul>
         </div>

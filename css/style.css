@@ -189,7 +189,7 @@ ul {
   width: 8px;
   height: 100%;
   background-color: rgba(238, 238, 238, 0.1);
-  border-radius: 0 0 50% 50%;
+  border-radius: 50% 50% 0 0;
   position: absolute;
   left: 6px;
   top: 5px;

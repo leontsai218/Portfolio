@@ -34,7 +34,7 @@ body
   color: $color_white
   font-size: 16px
   line-height: 28px
-  transition: 0.5s
+  transition: 1.5s
 
 hr
   background-color: rgba($color_white, 0.3)
@@ -112,7 +112,7 @@ ul
       display: inline-block
         
     .skill
-      transition: 1s
+      // transition: 1s
       li
         display: flex
         align-items: center
@@ -178,11 +178,12 @@ ul
         display: block
         +Size(8px, 100%)
         background-color: rgba($color_white, 0.1)
-        border-radius: 0 0 50% 50%
+        border-radius: 50% 50% 0 0
         position: absolute
         left: 6px
         top: 5px
-      
+      &>li
+        top: 20px
       .timePoint
         display: flex
         align-items: center
@@ -267,7 +268,7 @@ ul
   .photo
     +Size(200px, 200px)
     border-radius: 50%
-    background-image: url("image/ProfilePicture.jpg")
+    background-image: url("https://imgur.com/a1Nvwx7.jpg")
     background-size: cover
     border: 5px solid $color_white
     position: absolute

@@ -38,7 +38,6 @@
         h3(ref="exp" @click="HideContent('exp')") {{__("Label\\Experiences")}}
         ul.timePoints
           li(v-for="exp in Resume.Experiences")
-            h5.timePoint {{exp.Year}}
             ul.events
               li.event(v-for="(event, index) in exp.Events") 
                 .display(v-if="event.Display")
@@ -52,11 +51,11 @@
                   .hideBtn(@click="HideEvent(exp.Events[index])")
                 .collapsed(v-if="!event.Display" @click="ShowEvent(exp.Events[index])")
                   .tip {{__(event.Description)}}
+            h5.timePoint {{exp.Year}}
       .projects
         h3(ref="proj" @click="HideContent('proj')") {{__("Label\\Projects")}}
         ul.timePoints
           li(v-for="project in Resume.Projects")
-            h5.timePoint {{project.Year}}
             ul.events
               li.event(v-for="(proj, index) in project.Events") 
                 h4.desc 
@@ -68,6 +67,7 @@
                 ul.features
                   li.feature(v-for="feature in proj.Features") {{__(feature)}}
                 a.organization(v-if="proj.Organization" :href="proj.Link" target="_blank" v-html="__(proj.Organization)")
+            h5.timePoint {{project.Year}}
                 
     .contact
       ul
