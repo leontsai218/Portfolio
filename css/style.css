@@ -183,6 +183,9 @@ ul {
   padding-bottom: 5px;
   top: 20px;
 }
+.resume .right .timePoints > li {
+  top: 20px;
+}
 .resume .right .timePoints::before {
   content: "";
   display: block;

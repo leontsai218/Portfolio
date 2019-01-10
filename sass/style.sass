@@ -34,7 +34,7 @@ body
   color: $color_white
   font-size: 16px
   line-height: 28px
-  transition: 1.5s
+  transition: 0.5s
 
 hr
   background-color: rgba($color_white, 0.3)
@@ -112,7 +112,7 @@ ul
       display: inline-block
         
     .skill
-      // transition: 1s
+      transition: 1s
       li
         display: flex
         align-items: center
@@ -171,7 +171,8 @@ ul
     .timePoints
       padding-bottom: 5px
       top: 20px
-      
+      &>li
+        top: 20px
       // 時間軸
       &::before 
         content: ""
@@ -182,13 +183,11 @@ ul
         position: absolute
         left: 6px
         top: 5px
-      &>li
-        top: 20px
       .timePoint
         display: flex
         align-items: center
         color: $color_grey
-        
+       
         // 時間點
         &::before
           content: ""
@@ -268,7 +267,7 @@ ul
   .photo
     +Size(200px, 200px)
     border-radius: 50%
-    background-image: url("https://imgur.com/a1Nvwx7.jpg")
+    background-image: url("../image/ProfilePicture.jpg")
     background-size: cover
     border: 5px solid $color_white
     position: absolute
