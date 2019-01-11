@@ -247,8 +247,7 @@ ul {
   padding-top: 10px;
 }
 .resume .right .timePoints {
-  padding-bottom: 5px;
-  top: 20px;
+  padding-bottom: 25px;
 }
 .resume .right .timePoints > li {
   top: 20px;
@@ -372,11 +371,6 @@ ul {
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
-}
-.resume .corner {
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }
 
 @media screen and (max-width: 950px) {
