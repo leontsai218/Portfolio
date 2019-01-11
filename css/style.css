@@ -71,6 +71,9 @@ ul {
   cursor: pointer;
   transition: 0.5s;
 }
+.toTop:hover {
+  background-color: rgba(238, 238, 238, 0.9);
+}
 .toTop:hover i {
   -webkit-animation: upin 2s infinite;
           animation: upin 2s infinite;

@@ -336,7 +336,7 @@ var ResumeData = {
 					Organization: "Joey Chen @ Odd-e",
 					Link: "https://dotblogs.com.tw/hatelove/1",
 					Location: "Label\\Taiwan",
-					Display: true
+					Display: false
 				},
 			]
 		},
@@ -349,7 +349,7 @@ var ResumeData = {
 			    Organization: "Joey Chen @ Odd-e", 
 			    Link: "https://dotblogs.com.tw/hatelove/1", 
 			    Location: "Label\\Taiwan", 
-			    Display: true
+			    Display: false
 			  }, 
 			]
 		},
