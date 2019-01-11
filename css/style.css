@@ -442,6 +442,7 @@ ul {
   }
 
   .resume {
+    margin: 0;
     border: none;
   }
   .resume .contact {

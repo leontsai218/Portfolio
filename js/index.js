@@ -164,7 +164,8 @@ var ResumeData = {
 			Topic: "tech",
 			List: [
 				{ Name: "ASP.NET MVC" },
-				{ Name: "Bootstrap & RWD" },
+				{ Name: "Bootstrap" },
+        { Name: "Responsive Web Design" },
 				{ Name: "Vue.js" },
 				{ Name: "Kendo UI" },
 				{ Name: "WinForm" },
