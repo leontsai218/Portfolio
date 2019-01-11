@@ -43,14 +43,15 @@
             ul.events
               li.event(v-for="(event, index) in exp.Events") 
                 .display(v-if="event.Display")
-                  h4.desc 
+                  h4.desc(@click="HideEvent(exp.Events[index])") 
                     i(:class="event.IconClass" v-if="event.IconClass")
                     |{{__(event.Description)}}
+                    span.during(v-if="event.During") ({{event.During}})
+                    //- .hideBtn(@click="HideEvent(exp.Events[index])")
                   hr
                   p.detail(v-if="event.Detail" v-html="__(event.Detail)")
                   a.organization(v-if="event.Organization" :href="event.Link" target="_blank" v-html="__(event.Organization)")
                   .location @ {{__(event.Location)}}
-                  .hideBtn(@click="HideEvent(exp.Events[index])")
                 .collapsed(v-if="!event.Display" @click="ShowEvent(exp.Events[index])")
                   .tip {{__(event.Description)}}
             h5.timePoint {{exp.Year}}

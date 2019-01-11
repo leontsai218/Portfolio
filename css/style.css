@@ -267,7 +267,7 @@ ul {
 .resume .right .timePoints .timePoint {
   display: flex;
   align-items: center;
-  color: #a2a2a2;
+  color: #eee;
 }
 .resume .right .timePoints .timePoint::before {
   content: "";
@@ -292,6 +292,15 @@ ul {
   font-size: 20px;
   color: white;
 }
+.resume .right .timePoints .events .event .desc:hover {
+  color: #fa0;
+  cursor: pointer;
+}
+.resume .right .timePoints .events .event .desc .during {
+  color: #a2a2a2;
+  padding-left: 10px;
+  font-size: 1rem;
+}
 .resume .right .timePoints .events .event .detail {
   color: #a2a2a2;
 }
@@ -303,23 +312,6 @@ ul {
 }
 .resume .right .timePoints .events .event .location {
   color: #a2a2a2;
-}
-.resume .right .timePoints .events .event .hideBtn {
-  display: inline-block;
-  position: absolute;
-  bottom: 10px;
-  right: 0;
-  cursor: pointer;
-}
-.resume .right .timePoints .events .event .hideBtn::after {
-  content: "";
-  display: block;
-  border-color: transparent transparent #eee transparent;
-  border-width: 10px 5px 10px 5px;
-  border-style: solid solid solid solid;
-}
-.resume .right .timePoints .events .event .hideBtn:hover::after {
-  border-color: transparent transparent #fa0 transparent;
 }
 .resume .right .timePoints .events .collapsed {
   color: #a2a2a2;

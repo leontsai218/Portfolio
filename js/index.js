@@ -3,7 +3,7 @@ const RESOURCES = {
 		Label: {
 			ProgrammingLanguages: "Programming Languages",
 			RevisionControl: "Revision Control",
-      President: "Director", 
+      President: "Vice Director, Director", 
 			WalkingaroundTaiwan: "Walking Around Taiwan",
 			MandatoryMilitaryService: "Mandatory Military Service",
 			OutsourcedProgrammer: "Outsourced Programmer",
@@ -75,7 +75,7 @@ const RESOURCES = {
 			RevisionControl: "版本控制",
 			Editor: "編輯器",
 			Experiences: "重點經歷",
-			President: "社長",
+			President: "副社長、社長",
 			Taiwan: "台灣",
 			WalkingaroundTaiwan: "徒步環台",
 			MandatoryMilitaryService: "義務役兵役",
@@ -196,6 +196,7 @@ var ResumeData = {
 			Events: [
 				{
 					Description: "Label\\President",
+          During: "2008.07 - 2009.06", 
 					Organization: "Message\\NCKUPDC",
 					Location: "Label\\Taiwan",
 					Display: false
@@ -211,7 +212,8 @@ var ResumeData = {
 			Year: 2011,
 			Events: [
 				{
-					IconClass: "fa fa-graduation-cap",
+					IconClass: "fas fa-graduation-cap",
+          During: "2011.06", 
 					Description: "Message\\Bachelor",
 					Organization: "Message\\NCKUCSIE",
 					Link: "http://www.csie.ncku.edu.tw/ncku_csie/",
@@ -220,6 +222,7 @@ var ResumeData = {
 				},
 				{
 					Description: "Label\\WalkingaroundTaiwan",
+          During: "2011.07 - 2011.09", 
 					Detail: "Message\\WalkingaroundTaiwan",
 					Location: "Label\\Taiwan",
 					Display: false
@@ -231,6 +234,7 @@ var ResumeData = {
 			Events: [
 				{
 					Description: "Label\\MandatoryMilitaryService",
+          During: "2011.11 - 2012.10", 
 					Organization: "Message\\ROCA",
 					Location: "Label\\Taiwan",
 					Display: false
@@ -246,8 +250,9 @@ var ResumeData = {
 			Year: 2014,
 			Events: [
 				{
-					IconClass: "fa fa-briefcase",
+					IconClass: "fas fa-briefcase",
 					Description: "Label\\OutsourcedProgrammer",
+          During: "2014.05 - 2014.06", 
 					Detail: "Message\\CYTCoDetail",
 					Organization: "Message\\CYTCo",
 					Link: "http://www.chenyo-tech.com.tw/",
@@ -255,7 +260,9 @@ var ResumeData = {
 					Display: false
 				},
 				{
+          IconClass: "fas fa-book-reader",
 					Description: "Label\\PresenterInInternationalConference",
+          During: "2014.12", 
 					Detail: "Message\\PresenterInInternationalConferenceDetail",
 					Organization: "Industrial Engineering and Engineering Management",
 					Link: "http://www.ieem.org/public.asp?page=home.htm",
@@ -268,8 +275,9 @@ var ResumeData = {
 			Year: 2015,
 			Events: [
 				{
-					IconClass: "fa fa-briefcase",
+					IconClass: "fas fa-briefcase",
 					Description: "Label\\PartTimeSoftwareEngineer",
+          During: "2015.02 - 2015.07", 
 					Detail: "Message\\BuilderTCoDetail",
 					Organization: "Message\\BuilderTCo",
 					Link: "http://www.buildeab.com.tw/index.html",
@@ -277,16 +285,9 @@ var ResumeData = {
 					Display: false
 				},
 				{
-					IconClass: "fa fa-graduation-cap",
-					Description: "Message\\Master",
-					Detail: "Message\\MasterDetail",
-					Organization: "Message\\NCKUIEEM",
-					Link: "http://www.imis.ncku.edu.tw/index.php?Lang=zh-tw",
-					Location: "Label\\Taiwan",
-					Display: true
-				},
-				{
+          IconClass: "fas fa-book-reader",
 					Description: "Label\\ExchangeStudent",
+          During: "2015.09 - 2016.01", 
 					Detail: "Message\\SJTUDetail",
 					Organization: "Message\\SJTU",
 					Link: "https://www.sjtu.edu.cn/",
@@ -298,39 +299,58 @@ var ResumeData = {
 		{
 			Year: 2016,
 			Events: [
+        {
+					IconClass: "fas fa-graduation-cap",
+					Description: "Message\\Master",
+          During: "2016.01", 
+					Detail: "Message\\MasterDetail",
+					Organization: "Message\\NCKUIEEM",
+					Link: "http://www.imis.ncku.edu.tw/index.php?Lang=zh-tw",
+					Location: "Label\\Taiwan",
+					Display: true
+				},
 				{
-					IconClass: "fa fa-briefcase",
+					IconClass: "fas fa-briefcase",
 					Description: "Label\\Programmer",
+          During: "2016.04 - 2017.07", 
 					Detail: "Message\\ProgrammerDetail",
 					Organization: "Message\\GSS",
 					Link: "https://www.gss.com.tw/",
 					Location: "Label\\Taiwan",
 					Display: true
 				},
-				{
-					IconClass: "fa fa-briefcase",
-					Description: "Label\\ProgramAnalyst",
-					Detail: "Message\\ProgramAnalystDetail",
-					Organization: "Message\\GSS",
-					Link: "https://www.gss.com.tw/",
-					Location: "Label\\Taiwan",
-					Display: true
-				},
-				{
-					IconClass: "fa fa-briefcase",
+			]
+		},
+    {
+      Year: 2017,
+			Events: [
+        {
+					IconClass: "fas fa-briefcase",
 					Description: "Label\\Mentor",
 					Detail: "Message\\MentorDetail",
 					Organization: "Message\\GSS",
 					Link: "https://www.gss.com.tw/",
 					Location: "Label\\Taiwan",
 					Display: false
-				}
-			]
-		},
-		{
+				},
+        {
+					IconClass: "fas fa-briefcase",
+					Description: "Label\\ProgramAnalyst",
+          During: "2017.08 - 2018.04", 
+					Detail: "Message\\ProgramAnalystDetail",
+					Organization: "Message\\GSS",
+					Link: "https://www.gss.com.tw/",
+					Location: "Label\\Taiwan",
+					Display: true
+				},
+      ]
+    }, 
+    {
 			Year: 2018,
 			Events: [
-				{
+			  {
+          IconClass: "fas fa-book-reader",
+          During: "2018.11", 
 					Description: "Message\\TraineeOfTddAndRefactoringTraining",
 					Detail: "Message\\TddAndRefactoringTraining",
 					Organization: "Joey Chen @ Odd-e",
@@ -344,6 +364,8 @@ var ResumeData = {
 			Year: 2019,
 			Events: [
 			  {
+          IconClass: "fas fa-book-reader",
+          During: "2019.01", 
 			    Description: "Message\\TraineeOfTddTraining",
 			    Detail: "Message\\TddTraining", 
 			    Organization: "Joey Chen @ Odd-e", 
@@ -351,6 +373,11 @@ var ResumeData = {
 			    Location: "Label\\Taiwan", 
 			    Display: false
 			  }, 
+			]
+		},
+    {
+			Year: 2020,
+			Events: [
 			]
 		},
 	],

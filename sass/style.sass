@@ -226,7 +226,7 @@ ul
       .timePoint
         display: flex
         align-items: center
-        color: $color_grey
+        color: $color_white
        
         // 時間點
         &::before
@@ -247,6 +247,25 @@ ul
           .desc
             font-size: 20px
             color: white
+            &:hover
+              color: $color_orange
+              cursor: pointer
+            .during
+              color: $color_grey
+              padding-left: 10px
+              font-size: 1rem
+            //   .hideBtn
+            //     display: inline-block
+            //     &::after
+            //       border-color: transparent transparent $color_orange transparent
+            // .hideBtn
+            //   display: none
+            //   &::after
+            //     content: ""
+            //     display: block
+            //     border-color: transparent transparent $color_white transparent
+            //     border-width: 10px 5px 10px 5px
+            //     border-style: solid solid solid solid
           .detail
             color: $color_grey
           .features
@@ -255,20 +274,7 @@ ul
               list-style: disc
           .location
             color: $color_grey
-          .hideBtn
-            display: inline-block
-            position: absolute
-            bottom: 10px
-            right: 0
-            cursor: pointer
-            &::after
-              content: ""
-              display: block
-              border-color: transparent transparent $color_white transparent
-              border-width: 10px 5px 10px 5px
-              border-style: solid solid solid solid
-            &:hover::after
-              border-color: transparent transparent $color_orange transparent
+          
         .collapsed
           color: $color_grey
           cursor: pointer
