@@ -27,14 +27,12 @@ html, body
   width: 100%
 
 body
-  padding: 40px 80px
   display: flex
   justify-content: center
   background-color: $color_black
   color: $color_white
   font-size: 16px
   line-height: 28px
-  transition: 0.5s
 
 hr
   background-color: rgba($color_white, 0.3)
@@ -63,15 +61,56 @@ ul
   padding: 0
   list-style: none  
 
+.toTop
+  position: fixed
+  right: 1%
+  bottom: 2%
+  +Size(50px, 50px)
+  border-radius: 50%
+  background-color: rgba($color_white, 0.7)
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: hidden
+  font-size: 2rem
+  color: $color_black
+  z-index: 99
+  cursor: pointer
+  transition: 0.5s
+  &:hover
+    // transform: scale(1.2)
+    i
+      animation: upin 2s infinite
+      @keyframes upin
+        0%
+          bottom: -50px
+        30%
+          bottom: 0
+        60%
+          bottom: 0
+        100%
+          bottom: 50px
+  
+.nav
+  position: fixed
+  width: 100%
+  top: 0
+  background: linear-gradient(rgba($color_black, 0.9) 70%, transparent 100%)
+  transition: 0.5s
+  z-index: 99
+  &.atTop
+    background-color: $color_black
 .i18n
+  position: relative
   display: inline-block
+  color: $color_grey
   left: 50%
   transform: translate(-50%)
-  color: $color_grey
   transition: 0.5s
   .lang
     display: inline-block
     padding: 10px
+    padding-bottom: 0
     cursor: pointer
     &.active
       color: $color_white
@@ -88,11 +127,12 @@ ul
 
 .resume
   display: flex
-  // min-width: 520px
+  margin: 150px 80px 40px 80px
   padding: 50px
   border: 8px solid $color_white
   border-radius: 20px
-  
+  transition: 0.5s
+
   .left, .right
     padding: 15px
     
@@ -202,7 +242,6 @@ ul
         padding-left: 20px
         .event
           padding: 10px
-          // font-size: 16px
           i
             margin-right: 10px
           .desc
@@ -285,12 +324,11 @@ ul
     right: 0
 
 @media screen and (max-width: 950px)
-  body
-    padding: 0 40px 
   h3
     margin-top: 10px
   .resume
     display: block
+    margin: 60px 40px 0 40px
     padding: 20px
     .left, .right
       padding: 0
@@ -338,10 +376,8 @@ ul
       border-radius: 20px
       
 @media screen and (max-width: 1150px)
-  .i18n
-    left: 100%
-    transform: translate(-100%)
   .resume
+    margin-top: 60px
     .contact
       padding: 10px 110px 10px 10px
     .photo

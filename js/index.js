@@ -468,7 +468,10 @@ var vm = new Vue({
 		},
 		HideEvent: function (e) {
 			e.Display = false;
-		}
+		}, 
+    ToTop: function (e) {
+      $("html, body").animate({scrollTop: 0}, 300);
+    }
 	}
 });
 

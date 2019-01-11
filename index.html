@@ -30,12 +30,17 @@
 
 
   <div id="app">
-    <ul class="i18n">
-      <li class="lang" v-for="lang in Languages" ref="lang.Code" :class="lang.Code === Locale ? 'active' : ''" @click="SwitchLanguage(lang.Code)">
-        <div class="text">{{lang.Display}}</div>
-        <div class="state"></div>
-      </li>
-    </ul>
+    <div class="nav">
+      <div class="i18n">
+        <ul>
+          <li class="lang" v-for="lang in Languages" ref="lang.Code" :class="lang.Code === Locale ? 'active' : ''"
+            @click="SwitchLanguage(lang.Code)">
+            <div class="text">{{lang.Display}}</div>
+            <div class="state"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
     <div class="resume">
       <div class="left">
         <h1 class="myName">{{__(Resume.Name)}}</h1>
@@ -135,6 +140,7 @@
       </div>
       <div class="photo"></div>
     </div>
+    <div class="toTop" @click="ToTop"><i class="fa fa-angle-double-up"></i></div>
   </div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>

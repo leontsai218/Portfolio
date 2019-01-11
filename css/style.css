@@ -9,14 +9,12 @@ html, body {
 }
 
 body {
-  padding: 40px 80px;
   display: flex;
   justify-content: center;
   background-color: #262626;
   color: #eee;
   font-size: 16px;
   line-height: 28px;
-  transition: 0.5s;
 }
 
 hr {
@@ -55,17 +53,81 @@ ul {
   list-style: none;
 }
 
+.toTop {
+  position: fixed;
+  right: 1%;
+  bottom: 2%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(238, 238, 238, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-size: 2rem;
+  color: #262626;
+  z-index: 99;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.toTop:hover i {
+  -webkit-animation: upin 2s infinite;
+          animation: upin 2s infinite;
+}
+@-webkit-keyframes upin {
+  0% {
+    bottom: -50px;
+  }
+  30% {
+    bottom: 0;
+  }
+  60% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 50px;
+  }
+}
+@keyframes upin {
+  0% {
+    bottom: -50px;
+  }
+  30% {
+    bottom: 0;
+  }
+  60% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 50px;
+  }
+}
+.nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: linear-gradient(rgba(38, 38, 38, 0.9) 70%, transparent 100%);
+  transition: 0.5s;
+  z-index: 99;
+}
+.nav.atTop {
+  background-color: #262626;
+}
+
 .i18n {
+  position: relative;
   display: inline-block;
+  color: #a2a2a2;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
-  color: #a2a2a2;
   transition: 0.5s;
 }
 .i18n .lang {
   display: inline-block;
   padding: 10px;
+  padding-bottom: 0;
   cursor: pointer;
 }
 .i18n .lang.active {
@@ -88,9 +150,11 @@ ul {
 
 .resume {
   display: flex;
+  margin: 150px 80px 40px 80px;
   padding: 50px;
   border: 8px solid #eee;
   border-radius: 20px;
+  transition: 0.5s;
 }
 .resume .left, .resume .right {
   padding: 15px;
@@ -321,16 +385,13 @@ ul {
 }
 
 @media screen and (max-width: 950px) {
-  body {
-    padding: 0 40px;
-  }
-
   h3 {
     margin-top: 10px;
   }
 
   .resume {
     display: block;
+    margin: 60px 40px 0 40px;
     padding: 20px;
   }
   .resume .left, .resume .right {
@@ -393,12 +454,9 @@ ul {
   }
 }
 @media screen and (max-width: 1150px) {
-  .i18n {
-    left: 100%;
-    -webkit-transform: translate(-100%);
-            transform: translate(-100%);
+  .resume {
+    margin-top: 60px;
   }
-
   .resume .contact {
     padding: 10px 110px 10px 10px;
   }

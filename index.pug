@@ -1,8 +1,10 @@
 #app
-  ul.i18n
-    li.lang(v-for="lang in Languages" ref="lang.Code" :class="lang.Code === Locale ? 'active' : ''" @click="SwitchLanguage(lang.Code)")
-      .text {{lang.Display}}
-      .state
+  .nav
+    .i18n
+      ul
+        li.lang(v-for="lang in Languages" ref="lang.Code" :class="lang.Code === Locale ? 'active' : ''" @click="SwitchLanguage(lang.Code)")
+          .text {{lang.Display}}
+          .state
   .resume
     .left
       h1.myName {{__(Resume.Name)}}
@@ -78,3 +80,5 @@
     .photo
       //- a.more.btn.btn-primary(href="https://www.google.com" target="_blank") More
     //- .corner more
+  .toTop(@click="ToTop")
+    i.fa.fa-angle-double-up
