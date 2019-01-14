@@ -1,5 +1,5 @@
 const RESOURCES = {
-	EN: {
+	"en-US": {
 		Label: {
 			ProgrammingLanguages: "Programming Languages",
 			RevisionControl: "Revision Control",
@@ -43,8 +43,8 @@ const RESOURCES = {
 			MOSTKits: "Using kits such as NPOI, NLog etc.",
 			TraineeOfTddAndRefactoringTraining: "Trainee of \"TDD and Continuous Refactoring\"",
 			TddAndRefactoringTraining: "Attended a training of \"Evolutionary Development - TDD and Continuous Refactoring\" by Joey Chen @ Odd-e intended for improving development knowledge and skill.",
-      TraineeOfTddTraining: "Trainee of \"Unit Testing Effectively with Legacy Code\"",
-      TddTraining: "Attended a training of \"Unit Testing Effectively with Legacy Code\" by Joey Chen @ Odd-e intended for improving development knowledge and skill.",
+      TraineeOfUnitTestTraining: "Trainee of \"Unit Testing Effectively with Legacy Code\"",
+      UnitTestTraining: "Attended a training of \"Unit Testing Effectively with Legacy Code\" by Joey Chen @ Odd-e intended for improving development knowledge and skill.",
 			MOSTProject: "Taiwan Ministry of Science and Technology (MOST) External & Internal System [Customized Projects]",
 			MOSTProjectDetail: "A website system for public users such as professors & researchers submiting academic plans, while MOST internal users can manage data, review projects and assign tasks by this system.",
 			I18nIntroducer: "The person responsible for introducing i18n",
@@ -61,7 +61,7 @@ const RESOURCES = {
 			AutoDBBackup: "Using Windows Task Scheduler & bat scripts to implement data auto-encryption & auto-backup on Google Drive.",
 		}
 	},
-	TW: {
+	"zh-TW": {
 		Label: {
 			ProgrammingLanguages: "程式語言",
 			Advanced: "熟練",
@@ -118,8 +118,8 @@ const RESOURCES = {
 			MentorDetail: "在職期間擔任共計 5 名新人之指導員。",
 			TraineeOfTddAndRefactoringTraining: "「測試驅動開發與持續重構」課程學員",
 			TddAndRefactoringTraining: "自費參加 Joey Chen (91) 開設之「測試驅動開發與持續重構」課程，精進軟體開發實力。",
-      TraineeOfTddTraining: "「單元測試實戰操練營」課程學員",
-			TddTraining: "自費參加 Joey Chen (91) 開設之「單元測試實戰操練營」課程，精進軟體開發實力。",
+      TraineeOfUnitTestTraining: "「單元測試實戰操練營」課程學員",
+			UnitTestTraining: "自費參加 Joey Chen (91) 開設之「單元測試實戰操練營」課程，精進軟體開發實力。",
 			MOSTProject: "台灣科技部內部與外部系統 [客製化專案]",
 			MOSTProjectDetail: "供外部使用者進行學術申請、內部使用者進行資料管理、審查及分派、報表產製等完整功能，功能大多是依照客戶需求開發對資料庫進行視覺化的 CRUD，系統本身並無太多 Domain Knowledge 或演算法。<br>此案是首次將所學的 ASP.NET MVC 知識投入業界專案開發，從模仿前人寫基本的查詢功能開始，經歷介接 API、系統移植、維護等功能開發外的任務，後期負責新的子系統打底及開發，最後在離開專案前，因通熟專案架構而擔任導入 i18n 機制的負責人。支援此系列一共六個專案。",
 			MOSTKits: "使用第三方套件如：NPOI 進行 MS Office 檔案產製、NLog 進行網站錯誤紀錄等。",
@@ -136,7 +136,8 @@ const RESOURCES = {
 			UsingOpenSourceResources: "使用多項 Open Source MIT 授權資源。",
 			AutoDBBackup: "實現免費雲端自動化資料庫持續備份機制。",
 		}
-	}
+	}, 
+  // "zh-CN": {}
 };
 var ResumeData = {
 	Name: "Message\\Name",
@@ -150,9 +151,9 @@ var ResumeData = {
 			Topic: "lang",
 			List: [
 				{ Name: "C#.NET", Level: 8, LevelDesc: "Label\\Advanced" },
-				{ Name: "JavaScript", Level: 8, LevelDesc: "Label\\Advanced" },
+				{ Name: "JavaScript", Level: 7, LevelDesc: "Label\\Advanced" },
 				{ Name: "jQuery", Level: 8, LevelDesc: "Label\\Advanced" },
-				{ Name: "HTML / Pug", Level: 8, LevelDesc: "Label\\Advanced" },
+				{ Name: "HTML / Pug", Level: 7, LevelDesc: "Label\\Advanced" },
 				{ Name: "CSS / Sass", Level: 7, LevelDesc: "Label\\Advanced" },
 				{ Name: "SQL / T-SQL", Level: 7, LevelDesc: "Label\\Advanced" },
 				{ Name: "Java", Level: 6, LevelDesc: "Label\\Intermediate" },
@@ -165,11 +166,11 @@ var ResumeData = {
 			List: [
 				{ Name: "ASP.NET MVC" },
 				{ Name: "Bootstrap" },
-        { Name: "Responsive Web Design" },
-				{ Name: "Vue.js" },
+        { Name: "Vue.js" },
 				{ Name: "Kendo UI" },
 				{ Name: "WinForm" },
 				{ Name: "WebForm" },
+        { Name: "Responsive Web Design" },
 				{ Name: "Test-Driven-Development" }
 			]
 		},
@@ -367,8 +368,8 @@ var ResumeData = {
 			  {
           IconClass: "fas fa-book-reader",
           During: "2019.01", 
-			    Description: "Message\\TraineeOfTddTraining",
-			    Detail: "Message\\TddTraining", 
+			    Description: "Message\\TraineeOfUnitTestTraining",
+			    Detail: "Message\\UnitTestTraining", 
 			    Organization: "Joey Chen @ Odd-e", 
 			    Link: "https://dotblogs.com.tw/hatelove/1", 
 			    Location: "Label\\Taiwan", 
@@ -451,16 +452,24 @@ var ResumeData = {
 var Languages = [
 	{
 		Name: "English (US)",
-		Code: "EN",
-		Display: "EN"
+		Code: "en-US",
+		Display: "EN", 
 	},
 	{
-		Name: "中文(台灣)",
-		Code: "TW",
-		Display: "中"
+		Name: "Chinese (Taiwan)",
+		Code: "zh-TW",
+		Display: "繁", 
+    Default: true
 	},
+	// {
+	// 	Name: "Chinese (Taiwan)",
+	// 	Code: "zh-CN",
+	// 	Display: "簡", 
+	// },
 ];
-var DefaultLocale = "TW";
+var DefaultLocale =  $.grep(Languages, function(lang) {
+  return lang.Default;
+})[0].Code;
 
 ReverseTimeline();
 
@@ -522,7 +531,7 @@ function __(entry) {
 		return "";
 	}
 
-	let locale = vm && vm.Locale ? vm.Locale : DefaultLocale;
+	let locale = (vm && vm.Locale) ? vm.Locale : DefaultLocale;
 	let localeResource = RESOURCES[locale];
 
 	let entries = entry.split("\\");
@@ -530,7 +539,7 @@ function __(entry) {
 	let key = entries[1];
 	if (localeResource && localeResource[type]) {
 		let value = localeResource[type][key];
-		if (value) { return value; }
+		if (value !== undefined) { return value; }
 		else { return key; }
 	}
 
