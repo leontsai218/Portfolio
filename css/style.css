@@ -335,6 +335,10 @@ ul {
 .resume .right .timePoints .events .collapsed:hover .tip::before {
   border-color: #fa0 transparent transparent transparent;
 }
+.resume .right .projects .timePoints .events .event .desc:hover {
+  color: white;
+  cursor: initial;
+}
 .resume .contact {
   display: inline-block;
   position: absolute;
